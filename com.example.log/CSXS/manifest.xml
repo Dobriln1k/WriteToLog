@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionManifest Version="5.0" ExtensionBundleId="com.example.log" ExtensionBundleVersion="1.0.0"
-		ExtensionBundleName="log" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		ExtensionBundleName="com.example.log" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
 		<Extension Id="com.example.log" Version="1.0" />
 	</ExtensionList>
@@ -37,6 +37,10 @@
 		<Extension Id="com.example.log">
 			<DispatchInfo >
 				<Resources>
+				<CEFCommandLine> 
+		          <Parameter>--enable-nodejs</Parameter>
+		          <Parameter>--mixed-context</Parameter>
+		        </CEFCommandLine>
 				<MainPath>./index.html</MainPath>
 				<ScriptPath>./jsx/hostscript.jsx</ScriptPath>
 				</Resources>
@@ -45,7 +49,7 @@
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>Extension-Name</Menu>
+					<Menu>log</Menu>
 					<Geometry>
 						<Size>
 							<Height>300</Height>
@@ -62,11 +66,6 @@
                         
 					</Geometry>
 					<Icons>
-						<Icon Type="Normal">./icons/iconNormal.png</Icon>
-						<Icon Type="RollOver">./icons/iconRollover.png</Icon>
-						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
-						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
-						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
 					</Icons>					
 				</UI>
 			</DispatchInfo>
